@@ -1,0 +1,36 @@
+### Pobranie listy filmów
+GET http://127.0.0.1:8000/movies/
+
+### Pobranie szczegółów filmu
+GET http://127.0.0.1:8000/movies/1
+
+### Dodanie nowego filmu
+POST http://127.0.0.1:8000/movies/
+Content-Type: application/json
+
+{
+    "title": "Inception",
+    "director": "Christopher Nolan",
+    "year": 2010,
+    "description": "A mind-bending thriller about dream infiltration."
+}
+
+### Pobranie listy aktorów
+GET http://127.0.0.1:8000/actors/
+
+### Dodanie nowego aktora
+POST http://127.0.0.1:8000/actors/
+Content-Type: application/json
+
+{
+    "name": "Leonardo",
+    "surname": "DiCaprio"
+}
+
+### Dodanie aktora do filmu
+POST http://127.0.0.1:8000/movies/1/actors/
+Content-Type: application/json
+
+{
+    "actor_id": 1
+}
