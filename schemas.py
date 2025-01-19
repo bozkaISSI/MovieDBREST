@@ -37,3 +37,7 @@ class Actor(ActorBase):
 
     class Config:
         from_attributes = True  # Replaces orm_mode
+
+
+class ActorAdd(BaseModel):
+    actor_id: int

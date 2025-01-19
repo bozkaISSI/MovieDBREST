@@ -1,10 +1,10 @@
-### Pobranie listy filmów
+### Get List of Movies
 GET http://127.0.0.1:8000/movies/
 
-### Pobranie szczegółów filmu
+### Get Movie Details
 GET http://127.0.0.1:8000/movies/1
 
-### Dodanie nowego filmu
+### Create a Movie
 POST http://127.0.0.1:8000/movies/
 Content-Type: application/json
 
@@ -15,10 +15,10 @@ Content-Type: application/json
     "description": "A mind-bending thriller about dream infiltration."
 }
 
-### Pobranie listy aktorów
+### Get List of Actors
 GET http://127.0.0.1:8000/actors/
 
-### Dodanie nowego aktora
+### Create an Actor
 POST http://127.0.0.1:8000/actors/
 Content-Type: application/json
 
@@ -27,7 +27,7 @@ Content-Type: application/json
     "surname": "DiCaprio"
 }
 
-### Dodanie aktora do filmu
+### Add Actor to Movie
 POST http://127.0.0.1:8000/movies/1/actors/
 Content-Type: application/json
 

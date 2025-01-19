@@ -6,10 +6,12 @@ class BaseModel(Model):
         database = db
 
 class Actor(BaseModel):
+    id = IntegerField()
     name = CharField()
     surname = CharField()
 
 class Movie(BaseModel):
+    id = IntegerField()
     title = CharField()
     director = CharField()
     year = IntegerField()
@@ -18,7 +20,7 @@ class Movie(BaseModel):
 
 ActorMovie = Movie.actors.get_through_model()
 
-# Tworzenie tabeli
+# DB creation
 db.connect()
 db.create_tables([Actor, Movie, ActorMovie])
 db.close()
